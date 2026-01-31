@@ -1,1 +1,148 @@
-<html></html>
+<!DOCTYPE html>
+<html lang="id">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Nexora Tech Solutions</title>
+
+        <!-- CSS -->
+        <link rel="stylesheet" href="css/style.css" />
+    </head>
+
+    <body>
+
+    <!-- ===== NAVBAR ===== -->
+    <nav class="navbar">
+        <h2 class="logo">
+            <a href="#home">Nexora</a>
+        </h2>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#profile">Our Profile</a></li>
+            <li><a href="#message">Message Us</a></li>
+        </ul>
+    </nav>
+
+    <!-- ===== NAME INPUT MODAL ===== -->
+    <section id="name-gate" class="name-gate">
+        <div class="name-box">
+            <h2>Selamat Datang 👋</h2>
+            <p>Silakan masukkan nama Anda untuk melanjutkan</p>
+
+            <input type="text" id="user-name-input" placeholder="Nama Anda" autocomplete="off" />
+            <button id="save-name-btn">Masuk</button>
+
+            <p id="name-error" class="error-text"></p>
+        </div>
+    </section>
+
+    <!-- ===== HOME ===== -->
+    <section id="home" class="home">
+        <div>
+            <h1>Hi <span id="user-name"></span></h1>
+            <p class="home-subtitle">
+                Selamat datang di website resmi Nexora Tech Solutions
+            </p>
+        </div>
+    </section>
+
+    <!-- ===== OUR PROFILE ===== -->
+    <section id="profile" class="profile">
+        <!-- Banner -->
+        <div class="profile-banner">
+            <h2>Nexora Tech Solutions</h2>
+            <p class="tagline">Building Smart Digital Solutions</p>
+        </div>
+
+        <!-- About -->
+        <div class="profile-content">
+            <h3>About the Company</h3>
+            <p>
+                Nexora Tech Solutions adalah perusahaan IT yang fokus membantu bisnis dan individu
+                membangun solusi digital yang modern dan relevan. Kami mengembangkan website,
+                aplikasi berbasis web, serta sistem informasi yang dirancang sesuai kebutuhan.
+            </p>
+        </div>
+
+        <!-- Vision & Mission -->
+        <div class="profile-content">
+            <h3>Visi</h3>
+            <p>
+                Menjadi partner teknologi yang andal dalam menciptakan solusi digital yang cerdas,
+                efektif, dan berkelanjutan.
+            </p>
+
+            <h3>Misi</h3>
+            <ul>
+                <li>Mengembangkan produk digital yang fungsional dan mudah digunakan.</li>
+                <li>Membantu klien memanfaatkan teknologi secara optimal.</li>
+                <li>Menghadirkan solusi IT yang inovatif dan relevan.</li>
+                <li>Menjaga kualitas layanan melalui kolaborasi yang baik.</li>
+                <li>Terus beradaptasi dengan perkembangan teknologi.</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- ===== MESSAGE US ===== -->
+    <section id="message" class="message">
+        <h2>Message Us</h2>
+
+        <div class="message-container">
+            <!-- Form -->
+            <form id="contact-form">
+                <label>
+                    Name
+                    <input type="text" id="name" placeholder="Nama lengkap" />
+                </label>
+
+                <label>
+                    Email
+                    <input type="email" id="email" placeholder="Email aktif" />
+                </label>
+
+                <label>
+                    Phone Number
+                    <input
+                        type="text"
+                        id="phone"
+                        oninput="this.value = this.value.replace(/[^0-9]/g, '')"
+                    />
+                </label>
+
+                <label>
+                    Message
+                    <textarea id="messageText" placeholder="Tulis pesan Anda"></textarea>
+                </label>
+
+                <button type="submit">Submit</button>
+
+                <p id="success-message" class="success-text"></p>
+
+                <p id="form-error" class="error-text"></p>
+            </form>
+
+            <!-- Result -->
+            <div class="result">
+                <h3>Hasil Input</h3>
+                <p><strong>Waktu:</strong> <span id="result-time">-</span></p>
+                <p><strong>Nama:</strong> <span id="result-name">-</span></p>
+                <p><strong>Email:</strong> <span id="result-email">-</span></p>
+                <p><strong>No. HP:</strong> <span id="result-phone">-</span></p>
+                <p><strong>Pesan:</strong> <span id="result-message">-</span></p>
+            </div>
+        </div>
+    </section>
+
+    <div id="popup-success" class="popup-success">
+        Form berhasil dikirim. Terima kasih telah menghubungi kami.
+    </div>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer">
+        <p>© 2026 Nexora Tech Solutions</p>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+    </body>
+</html>
